@@ -1,0 +1,339 @@
+/* Estilos básicos para ASOREANC - RECONSTRUIDO */
+
+/* Estilos para el menú móvil */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  background-color: #ffffff !important;
+  backdrop-filter: none !important;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  background-color: #ffffff !important;
+  backdrop-filter: none !important;
+}
+
+/* Overlay del menú móvil - oscurece todo el body */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.mobile-menu-overlay.show {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+/* Efecto de oscurecimiento del body cuando el menú está abierto */
+body.menu-open {
+  overflow: hidden;
+}
+
+body.menu-open .mobile-menu-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Efecto directo en el body cuando el menú está abierto - solo afecta el contenido, no la sidebar */
+body.menu-open::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 9997;
+  pointer-events: none;
+}
+
+/* Asegurar que la sidebar esté por encima del overlay y ocupe toda la altura */
+.mobile-menu,
+#mobile-menu {
+  z-index: 10000 !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  width: 320px !important;
+  max-width: 85vw !important;
+}
+
+/* Contenedor interno de la sidebar para ocupar toda la altura */
+.mobile-menu > div,
+#mobile-menu > div {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Navegación que se expande para ocupar el espacio disponible */
+.mobile-menu nav,
+#mobile-menu nav {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Efecto adicional para el contenido principal cuando el menú está abierto */
+body.menu-open section,
+body.menu-open main,
+body.menu-open .main-content,
+body.menu-open footer {
+  filter: brightness(0.7);
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Asegurar que el header y la sidebar no se vean afectados */
+body.menu-open header,
+body.menu-open .mobile-menu,
+body.menu-open #mobile-menu,
+body.menu-open .sidebar,
+body.menu-open .mobile-sidebar {
+  filter: none !important;
+  opacity: 1 !important;
+  background: white !important;
+  z-index: 9999 !important;
+}
+
+/* Blur eliminado - sidebar sin efectos de desenfoque */
+
+/* Sidebar básica sin efectos - ocupar toda la altura */
+.mobile-menu,
+#mobile-menu {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  z-index: 9999 !important;
+}
+
+/* Header de la sidebar */
+.sidebar-header {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.logo-container {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    4px 4px 8px rgba(0, 0, 0, 0.1),
+    -2px -2px 6px rgba(255, 255, 255, 0.8);
+  padding: 8px;
+}
+
+.close-button {
+  width: 48px !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 16px !important;
+  background: linear-gradient(145deg, #f1f5f9, #e2e8f0) !important;
+  border: none !important;
+  box-shadow: 
+    4px 4px 8px rgba(0, 0, 0, 0.1),
+    -2px -2px 6px rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: #64748b !important;
+}
+
+.close-button:hover {
+  background: linear-gradient(145deg, #fef2f2, #fee2e2) !important;
+  color: #dc2626 !important;
+  transform: scale(1.05) rotate(90deg) !important;
+}
+
+/* Separador decorativo */
+.separator {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #10b981, transparent);
+  border-radius: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enlaces de la sidebar */
+.sidebar-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  padding: 1.2rem 1.8rem !important;
+  margin-bottom: 0.5rem !important;
+  border-radius: 20px !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  background: #ffffff !important;
+  color: #475569 !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.sidebar-link:hover {
+  background: #f0fdf4 !important;
+  color: #059669 !important;
+  transform: translateX(8px) !important;
+}
+
+/* Estado activo para enlaces normales */
+.sidebar-link.active {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border-color: #10b981 !important;
+}
+
+.sidebar-link.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #10b981;
+  border-radius: 0 4px 4px 0;
+}
+
+/* BOTÓN PQRS - SIMPLE Y VISIBLE */
+.sidebar-link.pqrs-button {
+  background: #10b981 !important;
+  color: white !important;
+  margin-top: 1.5rem !important;
+  font-weight: 600 !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+.sidebar-link.pqrs-button:hover {
+  background: #059669 !important;
+  color: white !important;
+  transform: translateX(8px) scale(1.02) !important;
+}
+
+.sidebar-link.pqrs-button.active {
+  background: #047857 !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5) !important;
+}
+
+/* Footer de la sidebar */
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.footer-content {
+  background: linear-gradient(145deg, #f8fafc, #f1f5f9);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+}/* Botó
+n del menú móvil mejorado */
+#mobile-menu-btn {
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(145deg, #ffffff, #f8fafc) !important;
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
+  box-shadow: 
+    2px 2px 6px rgba(0, 0, 0, 0.1),
+    -1px -1px 3px rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: #059669 !important;
+  cursor: pointer !important;
+}
+
+/* Solo mostrar el botón en pantallas pequeñas */
+@media (max-width: 1023px) {
+  #mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+/* Ocultar el botón en pantallas grandes (desktop) */
+@media (min-width: 1024px) {
+  #mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+#mobile-menu-btn:hover {
+  background: linear-gradient(145deg, #f0fdf4, #ecfdf5) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 
+    4px 4px 12px rgba(16, 185, 129, 0.2),
+    -2px -2px 6px rgba(255, 255, 255, 0.9) !important;
+  color: #047857 !important;
+}
+
+#mobile-menu-btn:active {
+  transform: scale(0.95) !important;
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Icono del menú móvil */
+#mobile-menu-btn svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke-width: 2.5 !important;
+  transition: all 0.3s ease !important;
+}
+
+#mobile-menu-btn:hover svg {
+  stroke-width: 3 !important;
+  transform: rotate(180deg) !important;
+}
+
+/* Animación del icono cuando se abre el menú */
+body.menu-open #mobile-menu-btn svg {
+  transform: rotate(90deg) !important;
+}
+
+/* Responsive: Ajustar en pantallas muy pequeñas */
+@media (max-width: 480px) {
+  #mobile-menu-btn {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  
+  #mobile-menu-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios - ASOREANC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="imagenes/logo.png">
+  <meta name="description" content="Servicios de gestión integral de residuos sólidos de ASOREANC">
+</head>
+
+<body class="bg-gradient-to-b from-green-50 to-blue-50 text-gray-800 overflow-x-hidden">
+
+
+  <!-- Header mejorado -->
+  <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-green-100">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-3 animate-slideInLeft">
+        <img src="imagenes/logo.png" alt="ASOREANC Logo" class="w-12 h-12 animate-float">
+        <div>
+          <h1 class="text-2xl font-bold text-green-700">ASOREANC</h1>
+          <p class="text-xs text-green-600 hidden sm:block">Reciclaje Sostenible</p>
+        </div>
+      </div>
+
+      <!-- Navegación desktop -->
+      <nav class="hidden lg:flex space-x-6 text-lg">
+        <a href="index.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Inicio</a>
+        <a href="nosotros.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Quiénes
+          Somos</a>
+        <a href="servicios.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 border-b-2 border-green-700">Servicios</a>
+        <a href="docs.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Documentos</a>
+        <a href="equipo.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Equipo</a>
+        <a href="noticias.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Noticias</a>
+        <a href="pqrs.html"
+          class="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 transition-all duration-300 btn-eco">PQRS</a>
+      </nav>
+
+      <!-- Botón menú móvil -->
+      <button id="mobile-menu-btn" class="lg:hidden text-green-700 hover:text-green-800 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-white shadow-2xl lg:hidden z-50" style="background-color: #ffffff !important; background: #ffffff !important;">
+      <div class="p-6" style="background-color: #ffffff !important; background: #ffffff !important;">
+        <!-- Header elegante de la sidebar -->
+        <div class="sidebar-header">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-3">
+              <div class="logo-container">
+                <img src="imagenes/logo.png" alt="ASOREANC" class="w-8 h-8">
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 text-lg">ASOREANC</h3>
+                <p class="text-xs text-green-600 font-medium">Reciclaje Sostenible</p>
+              </div>
+            </div>
+            <button id="close-mobile-menu" class="close-button">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Separador decorativo -->
+          <div class="separator"></div>
+        </div>
+        <nav class="space-y-4">
+          <a href="index.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+            <span>Inicio</span>
+          </a>
+          <a href="nosotros.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <span>Quiénes Somos</span>
+          </a>
+          <a href="servicios.html" class="sidebar-link active">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+            <span>Servicios</span>
+          </a>
+          <a href="docs.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Documentos</span>
+          </a>
+          <a href="equipo.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+            </svg>
+            <span>Nuestro Equipo</span>
+          </a>
+          <a href="noticias.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+            </svg>
+            <span>Noticias</span>
+          </a>
+          <a href="pqrs.html" class="sidebar-link pqrs-button">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+            <span>PQRS</span>
+          </a>
+        </nav>
+
+
+      </div>
+    </div>
+
+    <!-- Overlay para el menú móvil -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+  </header>
+
+
+
+  <!-- Hero Section -->
+  <section class="relative py-24 bg-gradient-to-b from-green-50 to-blue-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h1 class="text-5xl font-bold text-green-700 mb-6">Servicios de Recolección</h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        Conoce nuestras rutas de recolección y las empresas aliadas que nos apoyan en la gestión integral de residuos
+        sólidos
+      </p>
+    </div>
+  </section>
+
+  <!-- Rutas de Recolección -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-green-700 mb-6">Rutas de Recolección</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Nuestras rutas están estratégicamente diseñadas para cubrir las principales zonas de la ciudad,
+          optimizando la recolección de materiales reciclables
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Ruta Norte -->
+        <div
+          class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-green-700">Ruta Norte</h3>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Barrios:</strong> La Esperanza, Villa Nueva, El Progreso</p>
+            <p><strong>Días:</strong> Lunes, Miércoles, Viernes</p>
+            <p><strong>Horario:</strong> 6:00 AM - 12:00 PM</p>
+            <p><strong>Materiales:</strong> Papel, cartón, plástico, vidrio</p>
+          </div>
+          <div class="mt-6 p-4 bg-white rounded-lg">
+            <p class="text-sm text-green-600 font-semibold">📞 Contacto: +57 301 234 5678</p>
+          </div>
+        </div>
+
+        <!-- Ruta Centro -->
+        <div
+          class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-700">Ruta Centro</h3>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Barrios:</strong> Centro, La Candelaria, San Antonio</p>
+            <p><strong>Días:</strong> Martes, Jueves, Sábado</p>
+            <p><strong>Horario:</strong> 7:00 AM - 1:00 PM</p>
+            <p><strong>Materiales:</strong> Papel, cartón, metales, electrónicos</p>
+          </div>
+          <div class="mt-6 p-4 bg-white rounded-lg">
+            <p class="text-sm text-blue-600 font-semibold">📞 Contacto: +57 301 345 6789</p>
+          </div>
+        </div>
+
+        <!-- Ruta Sur -->
+        <div
+          class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M8 5a2 2 0 012-2h4a2 2 0 012 2v0H8v0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-purple-700">Ruta Sur</h3>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Barrios:</strong> San José, La Paz, Villa del Sur</p>
+            <p><strong>Días:</strong> Lunes, Miércoles, Viernes</p>
+            <p><strong>Horario:</strong> 1:00 PM - 6:00 PM</p>
+            <p><strong>Materiales:</strong> Plástico, vidrio, textiles</p>
+          </div>
+          <div class="mt-6 p-4 bg-white rounded-lg">
+            <p class="text-sm text-purple-600 font-semibold">📞 Contacto: +57 301 456 7890</p>
+          </div>
+        </div>
+
+        <!-- Ruta Industrial -->
+        <div
+          class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-orange-700">Ruta Industrial</h3>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Zonas:</strong> Parque Industrial, Zona Franca</p>
+            <p><strong>Días:</strong> Martes, Jueves</p>
+            <p><strong>Horario:</strong> 8:00 AM - 4:00 PM</p>
+            <p><strong>Materiales:</strong> Cartón industrial, metales, plásticos</p>
+          </div>
+          <div class="mt-6 p-4 bg-white rounded-lg">
+            <p class="text-sm text-orange-600 font-semibold">📞 Contacto: +57 301 567 8901</p>
+          </div>
+        </div>
+
+        <!-- Ruta Comercial -->
+        <div
+          class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-teal-700">Ruta Comercial</h3>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Zonas:</strong> Centro Comercial, Mercados, Oficinas</p>
+            <p><strong>Días:</strong> Lunes a Viernes</p>
+            <p><strong>Horario:</strong> 5:00 AM - 8:00 AM</p>
+            <p><strong>Materiales:</strong> Papel, cartón, plástico, orgánicos</p>
+          </div>
+          <div class="mt-6 p-4 bg-white rounded-lg">
+            <p class="text-sm text-teal-600 font-semibold">📞 Contacto: +57 301 678 9012</p>
+          </div>
+        </div>
+
+        <!-- Ruta Especial -->
+        <div
+          class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-red-700">Ruta Especial</h3>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Servicios:</strong> Recolección a domicilio, eventos</p>
+            <p><strong>Días:</strong> Bajo solicitud</p>
+            <p><strong>Horario:</strong> Flexible</p>
+            <p><strong>Materiales:</strong> Todos los tipos de reciclables</p>
+          </div>
+          <div class="mt-6 p-4 bg-white rounded-lg">
+            <p class="text-sm text-red-600 font-semibold">📞 Contacto: +57 301 789 0123</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empresas Colaboradoras -->
+  <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-green-700 mb-6">Empresas Colaboradoras</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Trabajamos en alianza con empresas comprometidas con el medio ambiente que nos apoyan
+          en la donación y gestión de materiales reciclables
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Empresa 1 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">EcoPapel S.A.S</h3>
+              <p class="text-green-600 font-semibold">Industria Papelera</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Materiales donados:</strong> Papel, cartón, archivo muerto</p>
+            <p><strong>Frecuencia:</strong> Semanal</p>
+            <p><strong>Volumen promedio:</strong> 2-3 toneladas/mes</p>
+            <p><strong>Años de colaboración:</strong> 5 años</p>
+          </div>
+          <div class="mt-6 flex items-center text-sm text-green-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Empresa certificada ISO 14001
+          </div>
+        </div>
+
+        <!-- Empresa 2 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">PlastiVerde Ltda.</h3>
+              <p class="text-blue-600 font-semibold">Transformación Plástica</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Materiales donados:</strong> Plástico PET, HDPE, PP</p>
+            <p><strong>Frecuencia:</strong> Quincenal</p>
+            <p><strong>Volumen promedio:</strong> 1.5-2 toneladas/mes</p>
+            <p><strong>Años de colaboración:</strong> 3 años</p>
+          </div>
+          <div class="mt-6 flex items-center text-sm text-blue-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Miembro del Pacto Global ONU
+          </div>
+        </div>
+
+        <!-- Empresa 3 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">MetalRecicla Corp.</h3>
+              <p class="text-purple-600 font-semibold">Recuperación de Metales</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Materiales donados:</strong> Aluminio, cobre, hierro, acero</p>
+            <p><strong>Frecuencia:</strong> Mensual</p>
+            <p><strong>Volumen promedio:</strong> 800kg-1 tonelada/mes</p>
+            <p><strong>Años de colaboración:</strong> 7 años</p>
+          </div>
+          <div class="mt-6 flex items-center text-sm text-purple-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Certificación BASC
+          </div>
+        </div>
+
+        <!-- Empresa 4 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">TecnoVerde S.A.</h3>
+              <p class="text-orange-600 font-semibold">Equipos Electrónicos</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Materiales donados:</strong> Equipos electrónicos, cables, baterías</p>
+            <p><strong>Frecuencia:</strong> Trimestral</p>
+            <p><strong>Volumen promedio:</strong> 500-700 unidades/trimestre</p>
+            <p><strong>Años de colaboración:</strong> 2 años</p>
+          </div>
+          <div class="mt-6 flex items-center text-sm text-orange-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Programa RAEE certificado
+          </div>
+        </div>
+
+        <!-- Empresa 5 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-teal-500">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Vidrios del Futuro</h3>
+              <p class="text-teal-600 font-semibold">Industria del Vidrio</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Materiales donados:</strong> Vidrio transparente, de color, espejos</p>
+            <p><strong>Frecuencia:</strong> Semanal</p>
+            <p><strong>Volumen promedio:</strong> 1-1.5 toneladas/mes</p>
+            <p><strong>Años de colaboración:</strong> 4 años</p>
+          </div>
+          <div class="mt-6 flex items-center text-sm text-teal-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Sello de Sostenibilidad
+          </div>
+        </div>
+
+        <!-- Empresa 6 -->
+        <div
+          class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-red-500">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">TextilSostenible</h3>
+              <p class="text-red-600 font-semibold">Industria Textil</p>
+            </div>
+          </div>
+          <div class="space-y-3 text-gray-700">
+            <p><strong>Materiales donados:</strong> Textiles, ropa usada, retazos</p>
+            <p><strong>Frecuencia:</strong> Quincenal</p>
+            <p><strong>Volumen promedio:</strong> 300-500 kg/mes</p>
+            <p><strong>Años de colaboración:</strong> 1 año</p>
+          </div>
+          <div class="mt-6 flex items-center text-sm text-red-600">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Certificación GOTS
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: "fadeIn 1.5s ease-in-out both",
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+
+    // Menú móvil manejado por script.js
+  </script>
+
+  <script src="script.js"></script>
+
+  <!-- Footer mejorado -->
+  <footer class="bg-green-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-green-800 to-green-900"></div>
+
+    <div class="max-w-7xl mx-auto px-6 py-12 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Información de la empresa -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="imagenes/logo.png" alt="ASOREANC Logo" class="w-12 h-12">
+            <div>
+              <h4 class="text-2xl font-bold">ASOREANC</h4>
+              <p class="text-green-200 text-sm">Reciclaje Sostenible</p>
+            </div>
+          </div>
+          <p class="text-green-100 mb-6 leading-relaxed">
+            Comprometidos con la sostenibilidad, el aprovechamiento de residuos y el bienestar de nuestros recicladores.
+            Trabajamos por un futuro más limpio y próspero para todos.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/asoreanc_" target="_blank"
+              class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110"
+              aria-label="Instagram">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.2 1.1.5 1.6 1 .5.5.8 1 .9 1.6.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.2.6-.5 1.1-1 1.6-.5.5-1 .8-1.6.9-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.2-1.1-.5-1.6-1-.5-.5-.8-1-.9-1.6-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.2-.6.5-1.1 1-1.6.5-.5 1-.8 1.6-.9.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zm0 2c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.2.4-.3 1-.4 2.1C3 9.5 3 9.9 3 13s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.2-1-.3-2.1-.4C15.5 4.2 15.1 4.2 12 4.2zm0 3.6a4.2 4.2 0 1 1 0 8.4 4.2 4.2 0 0 1 0-8.4zm0 2a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zm4.8-1a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/Asoreanc" target="_blank"
+              class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110"
+              aria-label="Facebook">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5A3.5 3.5 0 0 1 14 6h3v3h-2c-.55 0-1 .45-1 1V12h3l-.5 3h-2.5v7A10 10 0 0 0 22 12z" />
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@asociacionasoreanc" target="_blank"
+              class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110"
+              aria-label="TikTok">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M16.5 3c.4 2.3 1.9 3.7 4 3.9v3.4c-1.5.1-2.9-.3-4.2-1v6.8c0 4.2-2.8 6.1-5.8 6.1-2.8 0-5.5-1.8-5.5-5.4 0-3.4 2.7-5.3 5.5-5.3.6 0 1.2.1 1.8.3v3.4c-.3-.1-.7-.2-1.1-.2-1.2 0-2.4.8-2.4 2.2s1.2 2.2 2.4 2.2c1.4 0 2.4-.9 2.4-2.6V3h3.9z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-green-200">Enlaces Rápidos</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-green-100 hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="nosotros.html" class="text-green-100 hover:text-white transition-colors">Quiénes Somos</a></li>
+            <li><a href="servicios.html" class="text-green-100 hover:text-white transition-colors">Servicios</a></li>
+            <li><a href="docs.html" class="text-green-100 hover:text-white transition-colors">Documentos</a></li>
+            <li><a href="equipo.html" class="text-green-100 hover:text-white transition-colors">Nuestro Equipo</a></li>
+            <li><a href="noticias.html" class="text-green-100 hover:text-white transition-colors">Noticias</a></li>
+            <li><a href="pqrs.html" class="text-green-100 hover:text-white transition-colors">PQRS</a></li>
+          </ul>
+        </div>
+
+        <!-- Información de contacto -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-green-200">Contacto</h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📧</span>
+              <span class="text-green-100">contacto@asoreanc.org</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📱</span>
+              <span class="text-green-100">+57 301 123 4567</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📍</span>
+              <span class="text-green-100">Colombia</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">🕒</span>
+              <span class="text-green-100">Lun - Vie: 8:00 AM - 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea divisoria -->
+      <div class="border-t border-green-700 mt-8 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-green-200">
+          <p>&copy; 2025 ASOREANC. Todos los derechos reservados.</p>
+          <p class="mt-2 md:mt-0">Desarrollado con 💚 para el medio ambiente</p>
+        </div>
+      </div>
+    </div>
+  </footer>

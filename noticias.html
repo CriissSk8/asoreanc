@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noticias - ASOREANC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="imagenes/logo.png">
+  <meta name="description" content="Últimas noticias y actualidad de ASOREANC">
+</head>
+<body class="bg-gradient-to-b from-green-50 to-blue-50 text-gray-800 overflow-x-hidden">
+
+
+  <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-green-100">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-3 animate-slideInLeft">
+        <img src="imagenes/logo.png" alt="ASOREANC Logo" class="w-12 h-12 animate-float">
+        <div>
+          <h1 class="text-2xl font-bold text-green-700">ASOREANC</h1>
+          <p class="text-xs text-green-600 hidden sm:block">Reciclaje Sostenible</p>
+        </div>
+      </div>
+      
+      <!-- Navegación desktop -->
+      <nav class="hidden lg:flex space-x-6 text-lg">
+        <a href="index.html" class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Inicio</a>
+        <a href="nosotros.html" class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Quiénes Somos</a>
+        <a href="servicios.html" class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Servicios</a>
+        <a href="docs.html" class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Documentos</a>
+        <a href="equipo.html" class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Equipo</a>
+        <a href="noticias.html" class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 border-b-2 border-green-700">Noticias</a>
+        <a href="pqrs.html" class="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 transition-all duration-300 btn-eco">PQRS</a>
+      </nav>
+
+      <!-- Botón menú móvil -->
+      <button id="mobile-menu-btn" class="lg:hidden text-green-700 hover:text-green-800 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-white shadow-2xl lg:hidden z-50" style="background-color: #ffffff !important; background: #ffffff !important;">
+      <div class="p-6" style="background-color: #ffffff !important; background: #ffffff !important;">
+        <!-- Header elegante de la sidebar -->
+        <div class="sidebar-header">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-3">
+              <div class="logo-container">
+                <img src="imagenes/logo.png" alt="ASOREANC" class="w-8 h-8">
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 text-lg">ASOREANC</h3>
+                <p class="text-xs text-green-600 font-medium">Reciclaje Sostenible</p>
+              </div>
+            </div>
+            <button id="close-mobile-menu" class="close-button">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Separador decorativo -->
+          <div class="separator"></div>
+        </div>
+        <nav class="space-y-4">
+          <a href="index.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+            <span>Inicio</span>
+          </a>
+          <a href="nosotros.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <span>Quiénes Somos</span>
+          </a>
+          <a href="servicios.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+            <span>Servicios</span>
+          </a>
+          <a href="docs.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Documentos</span>
+          </a>
+          <a href="equipo.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+            </svg>
+            <span>Nuestro Equipo</span>
+          </a>
+          <a href="noticias.html" class="sidebar-link active">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+            </svg>
+            <span>Noticias</span>
+          </a>
+          <a href="pqrs.html" class="sidebar-link pqrs-button">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+            <span>PQRS</span>
+          </a>
+        </nav>
+
+
+      </div>
+    </div>
+
+    <!-- Overlay para el menú móvil -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+  </header>
+
+
+
+  <!-- Hero Section Noticias -->
+  <section class="relative pt-32 pb-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="animate-fadeInUp mb-16">
+        
+        <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight text-gray-800">
+          <span class="block">Noticias y</span>
+          <span class="block text-emerald-500">Actualidad</span>
+        </h1>
+        
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Mantente informado sobre nuestros logros, proyectos innovadores y el impacto positivo que estamos generando 
+          en las comunidades y el medio ambiente.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Noticias Destacadas -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          Historias de <span class="text-blue-500">Impacto</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Descubre cómo estamos transformando vidas y comunidades a través del reciclaje sostenible
+        </p>
+      </div>
+
+      <!-- Noticia Principal -->
+      <div class="mb-16 animate-on-scroll">
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            <div class="relative overflow-hidden">
+              <img src="imagenes/noticia1.jpg" alt="Noticia Principal" class="w-full h-80 lg:h-full object-cover hover:scale-105 transition-transform duration-500">
+              <div class="absolute top-6 left-6">
+                <span class="bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                  🔥 Noticia Destacada
+                </span>
+              </div>
+            </div>
+            <div class="p-12 flex flex-col justify-center">
+              <div class="flex items-center mb-4">
+                <span class="text-emerald-600 font-semibold text-sm bg-emerald-100 px-3 py-1 rounded-full mr-3">Octubre 2025</span>
+                <span class="text-gray-500 text-sm">📅 Hace 2 días</span>
+              </div>
+              <h3 class="text-3xl font-bold text-gray-800 mb-6 leading-tight">
+                ASOREANC Alcanza Récord Histórico: 2,000 Toneladas Recicladas
+              </h3>
+              <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                Celebramos un hito extraordinario al superar las 2,000 toneladas de residuos aprovechados este año, 
+                beneficiando directamente a más de 150 familias recicladoras y contribuyendo significativamente 
+                a la economía circular de nuestra región.
+              </p>
+              <div class="flex items-center justify-between">
+                <button onclick="openModal('modal1')" class="inline-flex items-center bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 hover:scale-105 shadow-lg">
+                  Leer Historia Completa
+                  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </button>
+                <div class="flex items-center text-gray-500 text-sm">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  1,247 lecturas
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de Noticias -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Noticia 1 -->
+        <div class="group animate-on-scroll">
+          <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border-l-4 border-emerald-500">
+            <div class="relative overflow-hidden">
+              <img src="imagenes/noticia2.jpg" alt="Noticia 2" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center mb-4">
+                <span class="text-blue-600 font-semibold text-xs bg-blue-100 px-3 py-1 rounded-full mr-3">Septiembre 2025</span>
+                <span class="text-gray-500 text-xs">🌱 Medio Ambiente</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-emerald-600 transition-colors leading-tight">
+                Jornada Ambiental Transforma Comunidad Rural
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                Más de 50 voluntarios participaron en una limpieza ecológica y siembra de 200 árboles nativos 
+                en la vereda El Encanto, creando un impacto ambiental duradero.
+              </p>
+              <div class="flex items-center justify-between">
+                <button onclick="openModal('modal2')" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors flex items-center">
+                  Leer más
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <span class="text-gray-400 text-xs">3 min lectura</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticia 2 -->
+        <div class="group animate-on-scroll">
+          <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border-l-4 border-blue-500">
+            <div class="relative overflow-hidden">
+              <img src="imagenes/noticia3.jpg" alt="Noticia 3" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center mb-4">
+                <span class="text-emerald-600 font-semibold text-xs bg-emerald-100 px-3 py-1 rounded-full mr-3">Agosto 2025</span>
+                <span class="text-gray-500 text-xs">🎓 Educación</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors leading-tight">
+                Alianza Estratégica con Universidades
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                Firmamos convenios con 3 universidades regionales para fomentar el voluntariado estudiantil 
+                y desarrollar investigación en sostenibilidad ambiental.
+              </p>
+              <div class="flex items-center justify-between">
+                <button onclick="openModal('modal3')" class="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors flex items-center">
+                  Leer más
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <span class="text-gray-400 text-xs">2 min lectura</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticia 3 -->
+        <div class="group animate-on-scroll">
+          <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border-l-4 border-emerald-500">
+            <div class="relative overflow-hidden">
+              <img src="imagenes/noticia1.jpg" alt="Noticia Adicional" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div class="p-8">
+              <div class="flex items-center mb-4">
+                <span class="text-blue-600 font-semibold text-xs bg-blue-100 px-3 py-1 rounded-full mr-3">Julio 2025</span>
+                <span class="text-gray-500 text-xs">💼 Proyectos</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-4 group-hover:text-emerald-600 transition-colors leading-tight">
+                Nuevo Centro de Acopio Inaugurado
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                Inauguramos nuestro tercer centro de acopio en la zona norte, aumentando nuestra capacidad 
+                de procesamiento en un 40% y generando 25 nuevos empleos directos.
+              </p>
+              <div class="flex items-center justify-between">
+                <button onclick="openModal('modal4')" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors flex items-center">
+                  Leer más
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+                <span class="text-gray-400 text-xs">4 min lectura</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Modales para las noticias -->
+  
+  <!-- Modal 1 - Noticia Principal -->
+  <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="relative">
+        <img src="imagenes/noticia1.jpg" alt="Noticia Principal" class="w-full h-64 object-cover rounded-t-3xl">
+        <button onclick="closeModal('modal1')" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-300 hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="p-8">
+        <div class="flex items-center mb-6">
+          <span class="bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium mr-4">🔥 Noticia Destacada</span>
+          <span class="text-emerald-600 font-semibold text-sm bg-emerald-100 px-3 py-1 rounded-full mr-3">Octubre 2025</span>
+          <span class="text-gray-500 text-sm">📅 Hace 2 días</span>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">ASOREANC Alcanza Récord Histórico: 2,000 Toneladas Recicladas</h2>
+        <div class="prose prose-lg max-w-none text-gray-600">
+          <p class="mb-6">Este mes celebramos un hito extraordinario que marca un antes y un después en la historia de ASOREANC. Hemos superado las 2,000 toneladas de residuos aprovechados en lo que va del año, una cifra que representa no solo números, sino vidas transformadas y un futuro más sostenible para nuestra región.</p>
+          
+          <p class="mb-6">El logro es resultado del trabajo incansable de más de 150 familias recicladoras que día a día se dedican a la noble tarea de transformar lo que otros consideran desecho en recursos valiosos. Cada tonelada reciclada representa empleos dignos, ingresos estables y la construcción de una economía circular que beneficia a toda la comunidad.</p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Impacto en Números</h3>
+          <ul class="mb-6 space-y-2">
+            <li>• <strong>2,000+ toneladas</strong> de residuos aprovechados</li>
+            <li>• <strong>150 familias</strong> beneficiadas directamente</li>
+            <li>• <strong>40% de aumento</strong> en capacidad de procesamiento</li>
+            <li>• <strong>25 nuevos empleos</strong> generados este año</li>
+            <li>• <strong>3 centros de acopio</strong> operando a plena capacidad</li>
+          </ul>
+          
+          <p class="mb-6">María González, una de nuestras recicladoras más experimentadas, comenta: "Gracias a ASOREANC mi familia ha podido salir adelante. Mis hijos están estudiando y tenemos una casa digna. El reciclaje no es solo nuestro trabajo, es nuestra esperanza."</p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Mirando hacia el Futuro</h3>
+          <p class="mb-6">Este logro nos motiva a seguir creciendo. Para el próximo año, tenemos proyectado alcanzar las 3,000 toneladas anuales y expandir nuestras operaciones a dos municipios adicionales. Además, estamos desarrollando nuevos programas de capacitación y tecnificación para nuestros recicladores.</p>
+          
+          <p>El camino hacia la sostenibilidad se construye paso a paso, tonelada a tonelada, familia a familia. Hoy celebramos este logro, mañana seguimos trabajando por un futuro más verde y próspero para todos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 - Jornada Ambiental -->
+  <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="relative">
+        <img src="imagenes/noticia2.jpg" alt="Jornada Ambiental" class="w-full h-64 object-cover rounded-t-3xl">
+        <button onclick="closeModal('modal2')" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-300 hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="p-8">
+        <div class="flex items-center mb-6">
+          <span class="text-blue-600 font-semibold text-sm bg-blue-100 px-3 py-1 rounded-full mr-3">Septiembre 2025</span>
+          <span class="text-gray-500 text-sm">🌱 Medio Ambiente</span>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Jornada Ambiental Transforma Comunidad Rural</h2>
+        <div class="prose prose-lg max-w-none text-gray-600">
+          <p class="mb-6">La vereda El Encanto fue testigo de una transformación extraordinaria durante nuestra jornada ambiental del pasado sábado. Más de 50 voluntarios, entre miembros de ASOREANC, estudiantes universitarios y habitantes de la comunidad, se unieron en una iniciativa que dejó huella tanto en el paisaje como en los corazones de todos los participantes.</p>
+          
+          <p class="mb-6">La jornada comenzó temprano en la mañana con la limpieza de la quebrada que atraviesa la vereda. Durante tres horas, los voluntarios retiraron más de 500 kilos de residuos sólidos que habían sido arrojados irresponsablemente al cauce del agua. Plásticos, llantas, electrodomésticos en desuso y otros desechos fueron clasificados y transportados para su adecuado tratamiento.</p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Siembra de Esperanza</h3>
+          <p class="mb-6">La segunda fase de la jornada consistió en la siembra de 200 árboles nativos en las zonas aledañas a la quebrada. Especies como ceibas, guayacanes y yarumos fueron plantados estratégicamente para crear un corredor biológico que ayude a la recuperación del ecosistema local.</p>
+          
+          <p class="mb-6">Don Carlos Ramírez, líder comunitario de El Encanto, expresó su gratitud: "Hacía años que soñábamos con ver nuestra quebrada limpia otra vez. Hoy no solo la limpiamos, sino que sembramos el futuro de nuestros nietos."</p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Educación Ambiental</h3>
+          <p class="mb-6">Paralelamente a las actividades de limpieza y siembra, se desarrollaron talleres de educación ambiental dirigidos a los niños y jóvenes de la comunidad. Los temas abordados incluyeron separación en la fuente, compostaje casero y la importancia de los ecosistemas acuáticos.</p>
+          
+          <p>Esta jornada es parte de nuestro programa "Comunidades Verdes", que busca replicar estas iniciativas en diferentes veredas de la región. El próximo mes estaremos en la vereda La Esperanza, continuando con nuestro compromiso de construir un territorio más sostenible y consciente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 - Alianza Universidades -->
+  <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="relative">
+        <img src="imagenes/noticia3.jpg" alt="Alianza Universidades" class="w-full h-64 object-cover rounded-t-3xl">
+        <button onclick="closeModal('modal3')" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-300 hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="p-8">
+        <div class="flex items-center mb-6">
+          <span class="text-emerald-600 font-semibold text-sm bg-emerald-100 px-3 py-1 rounded-full mr-3">Agosto 2025</span>
+          <span class="text-gray-500 text-sm">🎓 Educación</span>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Alianza Estratégica con Universidades</h2>
+        <div class="prose prose-lg max-w-none text-gray-600">
+          <p class="mb-6">ASOREANC ha dado un paso significativo hacia la consolidación de la investigación y el desarrollo sostenible en la región mediante la firma de convenios de cooperación con tres prestigiosas universidades locales: la Universidad Nacional, la Universidad Pontificia Bolivariana y la Universidad de Antioquia.</p>
+          
+          <p class="mb-6">Estos acuerdos, firmados en una ceremonia especial en nuestras instalaciones, establecen las bases para una colaboración a largo plazo que beneficiará tanto a la academia como a nuestras comunidades recicladoras.</p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Objetivos de la Alianza</h3>
+          <p class="mb-6">Los convenios contemplan múltiples áreas de trabajo conjunto:</p>
+          
+          <ul class="mb-6 space-y-2">
+            <li>• <strong>Voluntariado estudiantil:</strong> Estudiantes de diferentes carreras podrán realizar sus prácticas sociales y profesionales en nuestros proyectos</li>
+            <li>• <strong>Investigación aplicada:</strong> Desarrollo de estudios sobre economía circular, innovación en reciclaje y impacto social</li>
+            <li>• <strong>Capacitación técnica:</strong> Programas de formación para nuestros recicladores en nuevas tecnologías y procesos</li>
+            <li>• <strong>Emprendimiento verde:</strong> Incubación de proyectos sostenibles liderados por jóvenes de las comunidades</li>
+          </ul>
+          
+          <p class="mb-6">La Dra. Ana María Vélez, Decana de la Facultad de Ingeniería Ambiental de la Universidad Nacional, destacó: "Esta alianza representa una oportunidad única para que nuestros estudiantes apliquen sus conocimientos en contextos reales mientras contribuyen al desarrollo sostenible de la región."</p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Primeros Proyectos</h3>
+          <p class="mb-6">Ya se han definido los primeros tres proyectos de investigación que iniciarán en octubre:</p>
+          
+          <ol class="mb-6 space-y-2">
+            <li>1. <strong>Optimización de rutas de recolección</strong> usando inteligencia artificial</li>
+            <li>2. <strong>Desarrollo de bioplásticos</strong> a partir de residuos orgánicos</li>
+            <li>3. <strong>Estudio de impacto socioeconómico</strong> del reciclaje en comunidades vulnerables</li>
+          </ol>
+          
+          <p>Esta alianza marca el inicio de una nueva era para ASOREANC, donde la ciencia y la tecnología se ponen al servicio de la sostenibilidad y el desarrollo social. Esperamos que estos convenios sirvan de modelo para otras organizaciones del sector y contribuyan a la construcción de un ecosistema de innovación verde en nuestra región.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 - Centro de Acopio -->
+  <div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="relative">
+        <img src="imagenes/noticia1.jpg" alt="Centro de Acopio" class="w-full h-64 object-cover rounded-t-3xl">
+        <button onclick="closeModal('modal4')" class="absolute top-4 right-4 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 transition-all duration-300 hover:scale-110">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="p-8">
+        <div class="flex items-center mb-6">
+          <span class="text-blue-600 font-semibold text-sm bg-blue-100 px-3 py-1 rounded-full mr-3">Julio 2025</span>
+          <span class="text-gray-500 text-sm">💼 Proyectos</span>
+        </div>
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuevo Centro de Acopio Inaugurado</h2>
+        <div class="prose prose-lg max-w-none text-gray-600">
+          <p class="mb-6">Con gran orgullo y emoción, ASOREANC inauguró oficialmente su tercer centro de acopio en la zona norte de la ciudad. Esta nueva instalación representa una inversión de más de 800 millones de pesos y marca un hito importante en nuestro crecimiento y compromiso con la sostenibilidad regional.</p>
+          
+          <p class="mb-6">El moderno centro, ubicado estratégicamente en el barrio La Aurora, cuenta con tecnología de punta para el procesamiento y clasificación de residuos reciclables. Sus 2,500 metros cuadrados de área operativa están diseñados para maximizar la eficiencia y garantizar las mejores condiciones laborales para nuestros trabajadores.</p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Características del Nuevo Centro</h3>
+          <ul class="mb-6 space-y-2">
+            <li>• <strong>Capacidad de procesamiento:</strong> 15 toneladas diarias de material reciclable</li>
+            <li>• <strong>Tecnología avanzada:</strong> Bandas transportadoras automatizadas y sistemas de clasificación óptica</li>
+            <li>• <strong>Áreas especializadas:</strong> Zonas dedicadas para plástico, papel, cartón, vidrio y metales</li>
+            <li>• <strong>Instalaciones modernas:</strong> Oficinas administrativas, área de descanso y comedor para empleados</li>
+            <li>• <strong>Certificaciones:</strong> Cumple con todas las normas ambientales y de seguridad industrial</li>
+          </ul>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Impacto en el Empleo</h3>
+          <p class="mb-6">La apertura de este centro ha generado 25 nuevos empleos directos, beneficiando a familias de la zona norte que ahora tienen acceso a trabajos dignos y bien remunerados. Además, se estima que indirectamente se beneficiarán más de 100 recicladores independientes que podrán comercializar sus materiales en mejores condiciones.</p>
+          
+          <p class="mb-6">Luz Marina Pérez, una de las nuevas empleadas, comenta emocionada: "Después de años trabajando de manera informal, ahora tengo un empleo estable con todas las prestaciones. Mis hijos están muy orgullosos de que su mamá trabaje en una empresa que cuida el medio ambiente."</p>
+          
+          <h3 class="text-xl font-bold text-gray-800 mb-4 mt-8">Proyección de Crecimiento</h3>
+          <p class="mb-6">Con este tercer centro operativo, ASOREANC aumenta su capacidad total de procesamiento en un 40%, lo que nos permite atender la creciente demanda de servicios de reciclaje en la región. Se proyecta que para finales de año estaremos procesando más de 3,000 toneladas mensuales de material reciclable.</p>
+          
+          <p>La inauguración contó con la presencia del alcalde municipal, representantes de la Corporación Autónoma Regional y líderes comunitarios, quienes destacaron la importancia de este tipo de iniciativas para el desarrollo sostenible del territorio. Este nuevo centro no es solo una infraestructura, es un símbolo de nuestro compromiso inquebrantable con el futuro verde de nuestra región.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Funciones para manejar modales
+  function openModal(modalId) {
+    document.getElementById(modalId).classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restaurar scroll del body
+  }
+
+  // Cerrar modal al hacer clic fuera del contenido
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('bg-black')) {
+      const modals = ['modal1', 'modal2', 'modal3', 'modal4'];
+      modals.forEach(modalId => {
+        if (!document.getElementById(modalId).classList.contains('hidden')) {
+          closeModal(modalId);
+        }
+      });
+    }
+  });
+
+  // Cerrar modal con tecla Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      const modals = ['modal1', 'modal2', 'modal3', 'modal4'];
+      modals.forEach(modalId => {
+        if (!document.getElementById(modalId).classList.contains('hidden')) {
+          closeModal(modalId);
+        }
+      });
+    }
+  });
+
+  // Menú móvil manejado por script.js
+</script>
+
+  <script src="script.js"></script>
+
+  <!-- Footer mejorado -->
+  <footer class="bg-green-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-green-800 to-green-900"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 py-12 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Información de la empresa -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="imagenes/logo.png" alt="ASOREANC Logo" class="w-12 h-12">
+            <div>
+              <h4 class="text-2xl font-bold">ASOREANC</h4>
+              <p class="text-green-200 text-sm">Reciclaje Sostenible</p>
+            </div>
+          </div>
+          <p class="text-green-100 mb-6 leading-relaxed">
+            Comprometidos con la sostenibilidad, el aprovechamiento de residuos y el bienestar de nuestros recicladores. 
+            Trabajamos por un futuro más limpio y próspero para todos.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/asoreanc_" target="_blank" 
+               class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110" 
+               aria-label="Instagram">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.2 1.1.5 1.6 1 .5.5.8 1 .9 1.6.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.2.6-.5 1.1-1 1.6-.5.5-1 .8-1.6.9-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.2-1.1-.5-1.6-1-.5-.5-.8-1-.9-1.6-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.2-.6.5-1.1 1-1.6.5-.5 1-.8 1.6-.9.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zm0 2c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.2.4-.3 1-.4 2.1C3 9.5 3 9.9 3 13s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.2-1-.3-2.1-.4C15.5 4.2 15.1 4.2 12 4.2zm0 3.6a4.2 4.2 0 1 1 0 8.4 4.2 4.2 0 0 1 0-8.4zm0 2a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zm4.8-1a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/Asoreanc" target="_blank" 
+               class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110" 
+               aria-label="Facebook">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5A3.5 3.5 0 0 1 14 6h3v3h-2c-.55 0-1 .45-1 1V12h3l-.5 3h-2.5v7A10 10 0 0 0 22 12z"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@asociacionasoreanc" target="_blank" 
+               class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110" 
+               aria-label="TikTok">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M16.5 3c.4 2.3 1.9 3.7 4 3.9v3.4c-1.5.1-2.9-.3-4.2-1v6.8c0 4.2-2.8 6.1-5.8 6.1-2.8 0-5.5-1.8-5.5-5.4 0-3.4 2.7-5.3 5.5-5.3.6 0 1.2.1 1.8.3v3.4c-.3-.1-.7-.2-1.1-.2-1.2 0-2.4.8-2.4 2.2s1.2 2.2 2.4 2.2c1.4 0 2.4-.9 2.4-2.6V3h3.9z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-green-200">Enlaces Rápidos</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-green-100 hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="nosotros.html" class="text-green-100 hover:text-white transition-colors">Quiénes Somos</a></li>
+            <li><a href="servicios.html" class="text-green-100 hover:text-white transition-colors">Servicios</a></li>
+            <li><a href="docs.html" class="text-green-100 hover:text-white transition-colors">Documentos</a></li>
+            <li><a href="equipo.html" class="text-green-100 hover:text-white transition-colors">Nuestro Equipo</a></li>
+            <li><a href="noticias.html" class="text-green-100 hover:text-white transition-colors">Noticias</a></li>
+            <li><a href="pqrs.html" class="text-green-100 hover:text-white transition-colors">PQRS</a></li>
+          </ul>
+        </div>
+
+        <!-- Información de contacto -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-green-200">Contacto</h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📧</span>
+              <span class="text-green-100">contacto@asoreanc.org</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📱</span>
+              <span class="text-green-100">+57 301 123 4567</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📍</span>
+              <span class="text-green-100">Colombia</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">🕒</span>
+              <span class="text-green-100">Lun - Vie: 8:00 AM - 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea divisoria -->
+      <div class="border-t border-green-700 mt-8 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-green-200">
+          <p>&copy; 2025 ASOREANC. Todos los derechos reservados.</p>
+          <p class="mt-2 md:mt-0">Desarrollado con 💚 para el medio ambiente</p>
+        </div>
+      </div>
+    </div>
+  </footer>   
+

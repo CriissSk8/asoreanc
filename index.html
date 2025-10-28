@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASOREANC - Asociación de Recicladores</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="imagenes/logo.png">
+  <meta name="description"
+    content="ASOREANC - Comprometidos con la sostenibilidad y el bienestar de nuestros recicladores">
+</head>
+
+<body class="bg-white text-gray-800 overflow-x-hidden">
+
+
+  <!-- Header mejorado con menú móvil -->
+  <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-green-100">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center space-x-3 animate-slideInLeft">
+        <img src="imagenes/logo.png" alt="ASOREANC Logo" class="w-12 h-12 animate-float">
+        <div>
+          <h1 class="text-2xl font-bold text-green-700">ASOREANC</h1>
+          <p class="text-xs text-green-600 hidden sm:block">Reciclaje Sostenible</p>
+        </div>
+      </div>
+
+      <!-- Navegación desktop -->
+      <nav class="hidden lg:flex space-x-6 text-lg">
+        <a href="index.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 border-b-2 border-green-700">Inicio</a>
+        <a href="nosotros.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Quiénes
+          Somos</a>
+        <a href="servicios.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Servicios</a>
+        <a href="docs.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Documentos</a>
+        <a href="equipo.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Equipo</a>
+        <a href="noticias.html"
+          class="text-green-700 hover:text-blue-600 font-medium transition-all duration-300 hover:border-b-2 hover:border-blue-600">Noticias</a>
+        <a href="pqrs.html"
+          class="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 transition-all duration-300 btn-eco">PQRS</a>
+      </nav>
+
+      <!-- Botón menú móvil -->
+      <button id="mobile-menu-btn" class="lg:hidden text-green-700 hover:text-green-800 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-white shadow-2xl lg:hidden z-50"
+      style="background-color: #ffffff !important; background: #ffffff !important;">
+      <div class="p-6" style="background-color: #ffffff !important; background: #ffffff !important;">
+        <!-- Header elegante de la sidebar -->
+        <div class="sidebar-header">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center space-x-3">
+              <div class="logo-container">
+                <img src="imagenes/logo.png" alt="ASOREANC" class="w-8 h-8">
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 text-lg">ASOREANC</h3>
+                <p class="text-xs text-green-600 font-medium">Reciclaje Sostenible</p>
+              </div>
+            </div>
+            <button id="close-mobile-menu" class="close-button">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Separador decorativo -->
+          <div class="separator"></div>
+        </div>
+        <nav class="space-y-4">
+          <a href="index.html" class="sidebar-link active">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+              </path>
+            </svg>
+            <span>Inicio</span>
+          </a>
+          <a href="nosotros.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+              </path>
+            </svg>
+            <span>Quiénes Somos</span>
+          </a>
+          <a href="servicios.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+              </path>
+            </svg>
+            <span>Servicios</span>
+          </a>
+          <a href="docs.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+              </path>
+            </svg>
+            <span>Documentos</span>
+          </a>
+          <a href="equipo.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
+              </path>
+            </svg>
+            <span>Nuestro Equipo</span>
+          </a>
+          <a href="noticias.html" class="sidebar-link">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z">
+              </path>
+            </svg>
+            <span>Noticias</span>
+          </a>
+          <a href="pqrs.html" class="sidebar-link pqrs-button">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+              </path>
+            </svg>
+            <span>PQRS</span>
+          </a>
+        </nav>
+
+
+      </div>
+    </div>
+
+    <!-- Overlay para el menú móvil -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+  </header>
+
+
+  <!-- Hero Section con carrusel -->
+  <section id="inicio" class="relative pt-20 min-h-screen flex items-center overflow-hidden">
+    <!-- Carrusel de imágenes de fondo -->
+    <div class="absolute inset-0 w-full h-full">
+      <!-- Imagen 1 -->
+      <div class="carousel-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000"
+        id="slide-1">
+        <img src="imagenes/carousel1.jpg" alt="ASOREANC Reciclaje 1" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-blue-900/80"></div>
+      </div>
+
+      <!-- Imagen 2 -->
+      <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000"
+        id="slide-2">
+        <img src="imagenes/carousel2.jpg" alt="ASOREANC Reciclaje 2" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-blue-900/80"></div>
+      </div>
+
+      <!-- Imagen 3 -->
+      <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000"
+        id="slide-3">
+        <img src="imagenes/carousel3.jpg" alt="ASOREANC Reciclaje 3" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-blue-900/80"></div>
+      </div>
+
+      <!-- Imagen 4 -->
+      <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000"
+        id="slide-4">
+        <img src="imagenes/carousel4.jpg" alt="ASOREANC Reciclaje 4" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-blue-900/80"></div>
+      </div>
+    </div>
+
+    <!-- Controles del carrusel -->
+    <button onclick="previousSlide()"
+      class="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/30 backdrop-blur-sm text-white p-1.5 rounded-full hover:bg-black/50 transition-all duration-300">
+      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <button onclick="nextSlide()"
+      class="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/30 backdrop-blur-sm text-white p-1.5 rounded-full hover:bg-black/50 transition-all duration-300">
+      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <!-- Contenido principal -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center text-white">
+      <div class="animate-fadeInUp">
+
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+          <span class="block">Transformamos</span>
+          <span class="block text-blue-100">Residuos en</span>
+          <span class="block">Oportunidades</span>
+        </h1>
+
+        <p class="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
+          En ASOREANC dignificamos la labor del reciclador y promovemos la economía circular
+          para construir un futuro sostenible para todos.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <a href="nosotros.html"
+            class="group bg-white text-green-600 px-6 py-3 rounded-full font-semibold text-base hover:bg-gray-100 transition-all duration-300 inline-flex items-center space-x-2">
+            <span>Conoce Nuestra Historia</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+
+          <a href="servicios.html"
+            class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold text-base hover:bg-white hover:text-green-600 transition-all duration-300">
+            Nuestros Servicios
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicadores del carrusel -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+      <button onclick="goToSlide(1)"
+        class="carousel-indicator w-2 h-2 rounded-full bg-white/80 hover:bg-white transition-all duration-300"
+        id="indicator-1"></button>
+      <button onclick="goToSlide(2)"
+        class="carousel-indicator w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+        id="indicator-2"></button>
+      <button onclick="goToSlide(3)"
+        class="carousel-indicator w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+        id="indicator-3"></button>
+      <button onclick="goToSlide(4)"
+        class="carousel-indicator w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+        id="indicator-4"></button>
+    </div>
+  </section>
+
+  <!-- Sección de estadísticas elegante -->
+  <section class="py-20 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          Nuestro <span class="text-emerald-500">Impacto</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Cada día trabajamos para crear un impacto positivo en el medio ambiente y las comunidades
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="group text-center animate-on-scroll">
+          <div
+            class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            style="background: linear-gradient(135deg, #10b981, #059669);">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+              </path>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold mb-2" style="color: #10b981;">500+</div>
+          <p class="text-gray-600 font-medium">Toneladas Recicladas</p>
+        </div>
+
+        <div class="group text-center animate-on-scroll">
+          <div
+            class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+              </path>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold mb-2" style="color: #3b82f6;">150+</div>
+          <p class="text-gray-600 font-medium">Recicladores Activos</p>
+        </div>
+
+        <div class="group text-center animate-on-scroll">
+          <div
+            class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            style="background: linear-gradient(135deg, #10b981, #059669);">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+              </path>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold mb-2" style="color: #10b981;">25+</div>
+          <p class="text-gray-600 font-medium">Comunidades Beneficiadas</p>
+        </div>
+
+        <div class="group text-center animate-on-scroll">
+          <div
+            class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+              </path>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold mb-2" style="color: #3b82f6;">1000+</div>
+          <p class="text-gray-600 font-medium">Árboles Salvados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de servicios moderna -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          ¿Qué <span class="text-blue-500">Hacemos?</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Trabajamos en múltiples frentes para crear un impacto positivo en el medio ambiente y la sociedad
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="group animate-on-scroll">
+          <div
+            class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-l-4 border-emerald-500">
+            <div class="flex items-center mb-6">
+              <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mr-4">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Recolección y Clasificación</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Organizamos la recolección eficiente de materiales reciclables y su correcta clasificación
+              para maximizar el aprovechamiento de recursos.
+            </p>
+          </div>
+        </div>
+
+        <div class="group animate-on-scroll">
+          <div
+            class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-l-4 border-blue-500">
+            <div class="flex items-center mb-6">
+              <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mr-4">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Educación Ambiental</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Capacitamos a las comunidades sobre la importancia del reciclaje y el cuidado ambiental
+              para crear conciencia sostenible.
+            </p>
+          </div>
+        </div>
+
+        <div class="group animate-on-scroll">
+          <div
+            class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-l-4 border-emerald-500">
+            <div class="flex items-center mb-6">
+              <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mr-4">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Apoyo Social</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Brindamos apoyo integral y dignificamos la labor de los recicladores,
+              fortaleciendo sus capacidades y oportunidades.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16 animate-on-scroll">
+        <a href="servicios.html"
+          class="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl">
+          <span>Ver Todos Nuestros Servicios</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer mejorado -->
+  <footer class="bg-green-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-green-800 to-green-900"></div>
+
+    <div class="max-w-7xl mx-auto px-6 py-12 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Información de la empresa -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="imagenes/logo.png" alt="ASOREANC Logo" class="w-12 h-12">
+            <div>
+              <h4 class="text-2xl font-bold">ASOREANC</h4>
+              <p class="text-green-200 text-sm">Reciclaje Sostenible</p>
+            </div>
+          </div>
+          <p class="text-green-100 mb-6 leading-relaxed">
+            Comprometidos con la sostenibilidad, el aprovechamiento de residuos y el bienestar de nuestros
+            recicladores.
+            Trabajamos por un futuro más limpio y próspero para todos.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/asoreanc_" target="_blank"
+              class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110"
+              aria-label="Instagram">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.2 1.1.5 1.6 1 .5.5.8 1 .9 1.6.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.2.6-.5 1.1-1 1.6-.5.5-1 .8-1.6.9-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.2-1.1-.5-1.6-1-.5-.5-.8-1-.9-1.6-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.2-.6.5-1.1 1-1.6.5-.5 1-.8 1.6-.9.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zm0 2c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.2.4-.3 1-.4 2.1C3 9.5 3 9.9 3 13s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.2-1-.3-2.1-.4C15.5 4.2 15.1 4.2 12 4.2zm0 3.6a4.2 4.2 0 1 1 0 8.4 4.2 4.2 0 0 1 0-8.4zm0 2a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zm4.8-1a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/Asoreanc" target="_blank"
+              class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110"
+              aria-label="Facebook">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5A3.5 3.5 0 0 1 14 6h3v3h-2c-.55 0-1 .45-1 1V12h3l-.5 3h-2.5v7A10 10 0 0 0 22 12z" />
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@asociacionasoreanc" target="_blank"
+              class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 hover:scale-110"
+              aria-label="TikTok">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M16.5 3c.4 2.3 1.9 3.7 4 3.9v3.4c-1.5.1-2.9-.3-4.2-1v6.8c0 4.2-2.8 6.1-5.8 6.1-2.8 0-5.5-1.8-5.5-5.4 0-3.4 2.7-5.3 5.5-5.3.6 0 1.2.1 1.8.3v3.4c-.3-.1-.7-.2-1.1-.2-1.2 0-2.4.8-2.4 2.2s1.2 2.2 2.4 2.2c1.4 0 2.4-.9 2.4-2.6V3h3.9z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-green-200">Enlaces Rápidos</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-green-100 hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="nosotros.html" class="text-green-100 hover:text-white transition-colors">Quiénes Somos</a>
+            </li>
+            <li><a href="servicios.html" class="text-green-100 hover:text-white transition-colors">Servicios</a></li>
+            <li><a href="docs.html" class="text-green-100 hover:text-white transition-colors">Documentos</a></li>
+            <li><a href="equipo.html" class="text-green-100 hover:text-white transition-colors">Nuestro Equipo</a>
+            </li>
+            <li><a href="noticias.html" class="text-green-100 hover:text-white transition-colors">Noticias</a></li>
+            <li><a href="pqrs.html" class="text-green-100 hover:text-white transition-colors">PQRS</a></li>
+          </ul>
+        </div>
+
+        <!-- Información de contacto -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-green-200">Contacto</h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📧</span>
+              <span class="text-green-100">contacto@asoreanc.org</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📱</span>
+              <span class="text-green-100">+57 301 123 4567</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">📍</span>
+              <span class="text-green-100">Colombia</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-green-300">🕒</span>
+              <span class="text-green-100">Lun - Vie: 8:00 AM - 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Línea divisoria -->
+      <div class="border-t border-green-700 mt-8 pt-6">
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-green-200">
+          <p>&copy; 2025 ASOREANC. Todos los derechos reservados.</p>
+          <p class="mt-2 md:mt-0">Desarrollado con 💚 para el medio ambiente</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- JavaScript del carrusel -->
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 4;
+    let slideInterval;
+
+    // Función para mostrar una diapositiva específica
+    function showSlide(slideNumber) {
+      // Ocultar todas las diapositivas
+      for (let i = 1; i <= totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        const indicator = document.getElementById(`indicator-${i}`);
+        if (slide && indicator) {
+          slide.style.opacity = '0';
+          indicator.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+        }
+      }
+
+      // Mostrar la diapositiva actual
+      const activeSlide = document.getElementById(`slide-${slideNumber}`);
+      const activeIndicator = document.getElementById(`indicator-${slideNumber}`);
+      if (activeSlide && activeIndicator) {
+        activeSlide.style.opacity = '1';
+        activeIndicator.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+      }
+
+      currentSlide = slideNumber;
+    }
+
+    // Función para ir a la siguiente diapositiva
+    function nextSlide() {
+      const next = currentSlide >= totalSlides ? 1 : currentSlide + 1;
+      showSlide(next);
+    }
+
+    // Función para ir a la diapositiva anterior
+    function previousSlide() {
+      const prev = currentSlide <= 1 ? totalSlides : currentSlide - 1;
+      showSlide(prev);
+    }
+
+    // Función para ir a una diapositiva específica
+    function goToSlide(slideNumber) {
+      showSlide(slideNumber);
+      resetAutoSlide();
+    }
+
+    // Función para reiniciar el auto-slide
+    function resetAutoSlide() {
+      clearInterval(slideInterval);
+      startAutoSlide();
+    }
+
+    // Función para iniciar el auto-slide
+    function startAutoSlide() {
+      slideInterval = setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+    }
+
+    // Inicializar el carrusel cuando se carga la página
+    document.addEventListener('DOMContentLoaded', function () {
+      showSlide(1);
+      startAutoSlide();
+    });
+
+    // Pausar auto-slide cuando el mouse está sobre el carrusel
+    const heroSection = document.getElementById('inicio');
+    if (heroSection) {
+      heroSection.addEventListener('mouseenter', function () {
+        clearInterval(slideInterval);
+      });
+
+      heroSection.addEventListener('mouseleave', function () {
+        startAutoSlide();
+      });
+    }
+  </script>
+</body>
+
+</html>
